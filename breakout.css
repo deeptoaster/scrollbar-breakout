@@ -1,0 +1,61 @@
+.breakout {
+	position: relative;
+	width: 24em;
+	height: 12em;
+	margin: auto;
+	border: 1px solid #617078;
+	padding: 0.1em;
+	background-color: #232627;
+}
+.breakout ul {
+	list-style-type: none;
+	height: 1em;
+	margin: 0;
+	padding: 0.1em 0;
+	line-height: 1em;
+}
+.breakout li {
+	display: inline-block;
+	position: relative;
+	width: 2em;
+	height: 1em;
+}
+.breakout .breakout-red li {
+	background-color: #8f280d;
+}
+.breakout .breakout-orange li {
+	background-color: #8f480d;
+}
+.breakout .breakout-yellow li {
+	background-color: #8f5c0d;
+}
+.breakout .breakout-green li {
+	background-color: #8f6b0d;
+}
+.breakout li::before, .breakout li::after {
+	display: block;
+	position: absolute;
+	content: '';
+	width: 0.1em;
+	height: 1em;
+	background-color: #232627;
+}
+.breakout li::after {
+	right: 0;
+}
+.breakout .breakout-paddle {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+}
+.breakout .breakout-paddle span {
+	display: block;
+	width: 500%;
+	height: 1px;
+}
+.breakout input {
+	position: absolute;
+	margin: 0;
+}
