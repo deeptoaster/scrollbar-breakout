@@ -17,8 +17,8 @@ function Breakout(presenter) {
   var paddleX;
 
   function loop() {
-    xp = x + v;
-    yp = y + w;
+    var xp = x + v;
+    var yp = y + w;
 
     if (xp < ballRadius || xp + ballRadius > gridWidth) {
       v = -v;
@@ -68,32 +68,40 @@ function Breakout(presenter) {
         }
       }
 
-      if (valid) {
-        var i0 = Math.floor((xp - ballRadius) / brickWidth);
-        var i1 = Math.floor((xp + ballRadius) / brickWidth);
+      var i0 = Math.floor((xp - ballRadius) / brickWidth);
+      var i1 = Math.floor((xp + ballRadius) / brickWidth);
 
-        if (w > 0) {
-          var j = Math.floor((yp + ballRadius) / brickHeight);
+      if (w > 0) {
+        var j = Math.floor((yp + ballRadius) / brickHeight);
 
-          if (j != Math.floor((y + ballRadius) / brickHeight)) {
-            var valid0 = presenter.breakBrick(i0, j);
-            var valid1 = presenter.breakBrick(i1, j);
+        if (j != Math.floor((y + ballRadius) / brickHeight)) {
+          var valid0 = presenter.breakBrick(i0, j);
+          var valid1 = presenter.breakBrick(i1, j);
 
-            if (valid0 || valid1) {
-              w = -w;
+          if (valid0 || valid1) {
+            w = -w;
+
+            if (valid) {
               valid = false;
+            } else {
+              v = -v;
             }
           }
-        } else {
-          var j = Math.floor((yp - ballRadius) / brickHeight);
+        }
+      } else {
+        var j = Math.floor((yp - ballRadius) / brickHeight);
 
-          if (j != Math.floor((y - ballRadius) / brickHeight)) {
-            var valid0 = presenter.breakBrick(i0, j);
-            var valid1 = presenter.breakBrick(i1, j);
+        if (j != Math.floor((y - ballRadius) / brickHeight)) {
+          var valid0 = presenter.breakBrick(i0, j);
+          var valid1 = presenter.breakBrick(i1, j);
 
-            if (valid0 || valid1) {
-              w = -w;
+          if (valid0 || valid1) {
+            w = -w;
+
+            if (valid) {
               valid = false;
+            } else {
+              v = -v;
             }
           }
         }
