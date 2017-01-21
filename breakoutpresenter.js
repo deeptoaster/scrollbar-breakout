@@ -9,7 +9,7 @@ function BreakoutPresenter(target) {
   var $ball;
 
   this.breakBrick = function(i, j) {
-    var $brick = $grid.children().eq(j).children().eq(i);
+    var $brick = $grid.children('ul').eq(j).children().eq(i);
     var valid = $brick.length && !$brick.hasClass('breakout-broken');
 
     $brick.addClass('breakout-broken');

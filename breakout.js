@@ -39,8 +39,8 @@ function Breakout(presenter) {
     } else {
       var valid = true;
 
-      var j0 = Math.floor((y - ballRadius) / brickHeight);
-      var j1 = Math.floor((y + ballRadius) / brickHeight);
+      var j0 = Math.floor((yp - ballRadius) / brickHeight);
+      var j1 = Math.floor((yp + ballRadius) / brickHeight);
 
       if (v > 0) {
         var i = Math.floor((xp + ballRadius) / brickWidth);
@@ -68,31 +68,33 @@ function Breakout(presenter) {
         }
       }
 
-      var i0 = Math.floor((x - ballRadius) / brickWidth);
-      var i1 = Math.floor((x + ballRadius) / brickWidth);
+      if (valid) {
+        var i0 = Math.floor((xp - ballRadius) / brickWidth);
+        var i1 = Math.floor((xp + ballRadius) / brickWidth);
 
-      if (w > 0) {
-        var j = Math.floor((yp + ballRadius) / brickHeight);
+        if (w > 0) {
+          var j = Math.floor((yp + ballRadius) / brickHeight);
 
-        if (j != Math.floor((y + ballRadius) / brickHeight)) {
-          var valid0 = presenter.breakBrick(i0, j);
-          var valid1 = presenter.breakBrick(i1, j);
+          if (j != Math.floor((y + ballRadius) / brickHeight)) {
+            var valid0 = presenter.breakBrick(i0, j);
+            var valid1 = presenter.breakBrick(i1, j);
 
-          if (valid0 || valid1) {
-            w = -w;
-            valid = false;
+            if (valid0 || valid1) {
+              w = -w;
+              valid = false;
+            }
           }
-        }
-      } else {
-        var j = Math.floor((yp - ballRadius) / brickHeight);
+        } else {
+          var j = Math.floor((yp - ballRadius) / brickHeight);
 
-        if (j != Math.floor((y - ballRadius) / brickHeight)) {
-          var valid0 = presenter.breakBrick(i0, j);
-          var valid1 = presenter.breakBrick(i1, j);
+          if (j != Math.floor((y - ballRadius) / brickHeight)) {
+            var valid0 = presenter.breakBrick(i0, j);
+            var valid1 = presenter.breakBrick(i1, j);
 
-          if (valid0 || valid1) {
-            w = -w;
-            valid = false;
+            if (valid0 || valid1) {
+              w = -w;
+              valid = false;
+            }
           }
         }
       }
