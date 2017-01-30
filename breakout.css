@@ -52,6 +52,21 @@
   left: 0;
   overflow: auto;
 }
+.breakout .breakout-paddle::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.breakout .breakout-paddle::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+.breakout .breakout-paddle::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid #232627;
+  background-color: rgba(255, 255, 255, .5);
+}
+.breakout .breakout-paddle::-webkit-scrollbar-track {
+  margin-right: 1px;
+  background-color: #232627;
+}
 .breakout .breakout-paddle span {
   display: block;
   width: 500%;
