@@ -20,16 +20,16 @@
   height: 1em;
 }
 .breakout .breakout-red li {
-  background-color: #8f280d;
+  background-color: #900818;
 }
 .breakout .breakout-orange li {
-  background-color: #8f480d;
+  background-color: #974208;
 }
 .breakout .breakout-yellow li {
-  background-color: #8f5c0d;
+  background-color: #977a08;
 }
 .breakout .breakout-green li {
-  background-color: #8f6b0d;
+  background-color: #698e08;
 }
 .breakout li::before, .breakout li::after {
   display: block;
