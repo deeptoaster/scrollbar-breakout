@@ -1,6 +1,6 @@
 function Breakout(presenter) {
-  const delay = 30;
-  const speed = 10;
+  var delay = 30;
+  var speed = 10;
   var self = this;
   var gridRows;
   var gridCols;
