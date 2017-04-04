@@ -38,7 +38,6 @@ function Breakout(presenter) {
       }
     } else {
       var valid = true;
-
       var j0 = Math.floor((yp - ballRadius) / brickHeight);
       var j1 = Math.floor((yp + ballRadius) / brickHeight);
 
