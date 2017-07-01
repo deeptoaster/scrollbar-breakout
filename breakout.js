@@ -128,7 +128,6 @@ function Breakout(presenter) {
 
     if (!interval) {
       x = paddle;
-
       presenter.moveTo(x, gridHeight - ballRadius);
     }
   };
