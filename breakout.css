@@ -11,7 +11,7 @@
   height: 1em;
   margin: 0;
   padding: 0.1em 0;
-  line-height: 1em;
+  line-height: 1;
 }
 .breakout li {
   display: inline-block;
