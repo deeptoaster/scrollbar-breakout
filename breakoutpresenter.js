@@ -29,7 +29,7 @@ function BreakoutPresenter(target) {
       ul += '</ul>';
     }
 
-    $grid = $('<div class="breakout">' + ul + '</div>').appendTo(target);
+    $grid = $(target).addClass('breakout').html(ul);
 
     $paddle = $('<div class="breakout-paddle"><span /></div>')
         .scroll(function() {
