@@ -20,13 +20,8 @@ function BreakoutPresenter(target) {
     var ul = '';
 
     for (var i = 0; i < rows; i++) {
-      ul += '<ul class="breakout-' + colors[i] + '">';
-
-      for (var j = 0; j < cols; j++) {
-        ul += '<li />';
-      }
-
-      ul += '</ul>';
+      ul += '<ul class="breakout-' + colors[i] + '">' + '<li />'.repeat(cols) +
+          '</ul>';
     }
 
     $grid = $(target).addClass('breakout').html(ul);
