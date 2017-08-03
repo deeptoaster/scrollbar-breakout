@@ -14,7 +14,7 @@ function BreakoutPresenter(target) {
 
     $brick.addClass('breakout-broken');
     return valid;
-  }
+  };
 
   this.createGrid = function(rows, cols) {
     var ul = '';
@@ -52,10 +52,10 @@ function BreakoutPresenter(target) {
       top: y - ballRadius,
       left: x - ballRadius
     });
-  }
+  };
 
   this.reset = function() {
     $paddle.scrollLeft(0);
     $paddle.scrollLeft(right / 2);
-  }
+  };
 }
